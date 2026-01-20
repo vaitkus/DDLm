@@ -11,11 +11,11 @@ data_DDL_DIC
     _dictionary.title             DDL_DIC
     _dictionary.class             Reference
     _dictionary.version           4.2.0
-    _dictionary.date              2025-07-04
+    _dictionary.date              2026-01-20
     _dictionary.uri
         https://raw.githubusercontent.com/COMCIFS/cif_core/master/ddl.dic
     _dictionary.ddl_conformance   4.2.0
-    _dictionary.namespace         DdlDic
+    _dictionary.namespace         DDLm
     _description.text
 ;
     This dictionary contains the definitions of attributes that
@@ -3069,7 +3069,7 @@ save_
        by explicitly specifying that it adheres to the formal grammar
        provided in SemVer version 2.0.0.
 ;
-         4.2.0                    2025-07-04
+         4.2.0                    2026-01-20
 ;
        # Please update the date above and describe the change below until
        # ready for the next release
@@ -3121,4 +3121,6 @@ save_
 
        Clarified that empty range values that include neither the upper nor
        the lower bound are not allowed.
+
+       Changed _dictionary.namespace attribute from 'DdlDic' to 'DDLm'.
 ;
