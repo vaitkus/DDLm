@@ -2552,7 +2552,10 @@ save_
                                    '_dictionary_audit.version'
                                    '_dictionary_audit.date'
                                    '_dictionary_audit.revision'
-                                   '_dictionary.doi']
+                                   '_dictionary.doi'
+                                   '_dictionary_author.name'
+                                   '_dictionary_author.id_orcid'
+                                   '_dictionary_author.email']
          Dictionary  Prohibited   [ALIAS  CATEGORY_KEY  DEFINITION
                                    DESCRIPTION_EXAMPLE  ENUMERATION  IMPORT
                                    METHOD  NAME  TYPE  UNITS]
