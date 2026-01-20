@@ -312,14 +312,60 @@ save_DEFINITION_REPLACED
     _definition.id                DEFINITION_REPLACED
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2019-04-02
+    _definition.update            2026-01-20
     _description.text
 ;
     Attributes used to describe deprecated and replaced definitions.
+    A category definition may be marked as deprecated only if every
+    data item defined within that category is also explicitly marked
+    as deprecated.
 ;
     _name.category_id             DEFINITION
     _name.object_id               DEFINITION_REPLACED
     _category_key.name            '_definition_replaced.id'
+
+    loop_
+      _description_example.case
+      _description_example.detail
+;
+        _definition.id                '_category_a.old_item'
+
+        loop_
+          _definition_replaced.id
+          _definition_replaced.by
+             1                        '_category_a.new_item_1'
+             2                        '_category_a.new_item_2'
+             3                        '_category_b.new_item_3'
+;
+;
+         An excerpt from a definition that marks the _category_a.old_item
+         data item as deprecated and replaces it with three data items:
+         _category_a.new_item_1, _category_a.new_item_2 and
+         _category_b.new_item_3.
+;
+;
+        _definition.id                '_category_a.item'
+        _definition_replaced.id       1
+        _definition_replaced.by       .
+;
+;
+         An excerpt from a definition that marks the _category_a.item data
+         item as deprecated without specifying a replacement data item.
+         The missing replacement may also indicate that the item was superseded
+         by a complex new approach (e.g. involving multiple interlinked items
+         from several categories). In such cases, the new approach should be
+         described in the _description.text attribute of the deprecated item.
+;
+;
+        _definition.id                CATEGORY_A
+        _definition_replaced.id       1
+        _definition_replaced.by       .
+;
+;
+         An excerpt from a definition that marks the CATEGORY_A category
+         as deprecated. This also indicates that all data items in this
+         category have been individually marked as deprecated.
+;
 
 save_
 
@@ -327,13 +373,13 @@ save_definition_replaced.by
 
     _definition.id                '_definition_replaced.by'
     _definition.class             Attribute
-    _definition.update            2019-04-02
+    _definition.update            2026-01-20
     _description.text
 ;
-    Name of the data item that should be used instead of the defined data
-    item. The defined data item is deprecated and should not be used. A
-    value of '.' signifies that the data item is deprecated, with no
-    replacement.
+    Name of the data item that should be used instead of the defined
+    data item or category. The definition that contains this attribute
+    is considered deprecated and should not be used. A value of '.'
+    signifies that a definition is deprecated with no replacement.
 ;
     _name.category_id             definition_replaced
     _name.object_id               by
@@ -348,10 +394,10 @@ save_definition_replaced.id
 
     _definition.id                '_definition_replaced.id'
     _definition.class             Attribute
-    _definition.update            2019-04-02
+    _definition.update            2026-01-20
     _description.text
 ;
-    An opaque identifier for the replacement.
+    An opaque identifier for the replacement or deprecation.
 ;
     _name.category_id             definition_replaced
     _name.object_id               id
@@ -3123,4 +3169,7 @@ save_
        the lower bound are not allowed.
 
        Changed _dictionary.namespace attribute from 'DdlDic' to 'DDLm'.
+
+       Specified that the DEFINITION_REPLACED category may be used to deprecate
+       categories, added usage examples.
 ;
