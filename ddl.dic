@@ -231,8 +231,8 @@ save_definition.class
 ;
          Loop
 ;
-         Category of items that in a data file may reside in a loop-list with a
-         key item defined.
+         Category of items that in a data file may reside in a looped list
+         with a key item defined.
 ;
          Set
 ;
@@ -451,7 +451,7 @@ save_description.key_words
     _definition.update            2013-03-06
     _description.text
 ;
-    List of key-words categorising the item.
+    List of key-words categorizing the item.
 ;
     _description.common           'key words'
     _name.category_id             description
@@ -470,7 +470,7 @@ save_description.text
     _definition.update            2021-07-20
     _description.text
 ;
-    The text description of the defined item, category,
+    The text description of the defined item, category
     or dictionary.
 ;
     _description.common           description
@@ -491,7 +491,7 @@ save_DESCRIPTION_EXAMPLE
     _definition.update            2021-07-20
     _description.text
 ;
-    Descriptive (non-machine parsable) examples of values of the
+    Descriptive (non-machine-parsable) examples of values of the
     defined items and categories.
 ;
     _name.category_id             DESCRIPTION
@@ -549,7 +549,7 @@ save_DICTIONARY
     _description.text
 ;
     Attributes for identifying and registering the dictionary. The items
-    in this category are NOT used as attributes of INDIVIDUAL data items.
+    in this category are not used as attributes of individual data items.
 ;
     _name.category_id             ATTRIBUTES
     _name.object_id               DICTIONARY
@@ -563,7 +563,7 @@ save_dictionary.class
     _definition.update            2012-05-07
     _description.text
 ;
-    The nature, or field of interest, of data items defined in the dictionary.
+    The nature or field of interest of data items defined in the dictionary.
 ;
     _name.category_id             dictionary
     _name.object_id               class
@@ -725,9 +725,9 @@ save_dictionary.namespace
     _definition.update            2006-12-05
     _description.text
 ;
-    The namespace code that may be prefixed (with a trailing double colon
+    The name-space code that may be prefixed (with a trailing double colon
     '::') to an item tag defined in the defining dictionary when used
-    in particular applications. Because tags must be unique, namespace
+    in particular applications. Because tags must be unique, name-space
     codes are unlikely to be used in data files.
 ;
     _name.category_id             dictionary
@@ -803,7 +803,7 @@ save_DICTIONARY_AUDIT
     _description.text
 ;
     Attributes for identifying and registering the dictionary. The items
-    in this category are NOT used as attributes of individual data items.
+    in this category are not used as attributes of individual data items.
 ;
     _name.category_id             DICTIONARY
     _name.object_id               DICTIONARY_AUDIT
@@ -1136,7 +1136,7 @@ save_enumeration.def_index_id
     used instead of this item.
 
     Specifies the data name of the item with a value used as an index
-    to the DEFAULT enumeration list (in category enumeration_default)
+    to the default enumeration list (in category ENUMERATION_DEFAULT)
     in order to select the default enumeration value for the
     defined item. The value of the identified data item must match
     one of the _enumeration_default.index values.
@@ -1179,10 +1179,10 @@ save_enumeration.default
     _definition.update            2021-11-15
     _description.text
 ;
-    The default value for the defined item if it is not specified explicitly.
-    Value of this attribute inherits the enumeration range, enumeration set,
-    container, dimension, content and purpose type constraints of the defining
-    item.
+    The default value for the defined item if it is not specified
+    explicitly. The value of this attribute inherits the enumeration
+    range, enumeration set, container, dimension, content and purpose
+    type constraints of the defining item.
 ;
     _name.category_id             enumeration
     _name.object_id               default
@@ -1292,7 +1292,7 @@ save_enumeration_default.index
     Deprecated. The _enumeration_defaults.index data item should be
     used instead of this item.
 
-    Index key in the list default values referenced to by the value
+    Index key in the list of default values referenced to by the value
     of _enumeration.def_index_id.
 ;
     _name.category_id             enumeration_default
@@ -1460,9 +1460,10 @@ save_enumeration_set.state
     _definition.update            2023-11-07
     _description.text
 ;
-    Permitted value state for the defined item. Value of this attribute inherits
-    the enumeration range, enumeration set, container, dimension, content and
-    purpose type constraints of the defining item.
+    Permitted value state for the defined item. The value of this
+    attribute inherits the enumeration range, enumeration set,
+    container, dimension, content and purpose type constraints
+    of the defining item.
 ;
     _name.category_id             enumeration_set
     _name.object_id               state
@@ -1687,7 +1688,7 @@ save_import_details.frame_id
     _definition.update            2021-08-18
     _description.text
 ;
-    The save frame code of the definition frame to be imported.
+    The save-frame code of the definition frame to be imported.
 ;
     _name.category_id             import_details
     _name.object_id               frame_id
@@ -1901,7 +1902,7 @@ save_import_details.single_index
 ;
          save
 ;
-         Save frame code of source definition.
+         Save-frame code of source definition.
 ;
          mode
 ;
@@ -2033,7 +2034,7 @@ save_name.linked_item_id
 ;
     Data name of an equivalent item which has a
     common set of values, or, in the definition of a type SU
-    item is the name of the associated measurand item to
+    item, is the name of the associated measurand item to
     which the standard uncertainty applies.
 ;
     _name.category_id             name
@@ -2072,7 +2073,7 @@ save_TYPE
     _definition.update            2011-06-26
     _description.text
 ;
-    Attributes which specify the 'typing' of data items.
+    Attributes which specify the typing of data items.
 ;
     _name.category_id             ATTRIBUTES
     _name.object_id               TYPE
@@ -2109,11 +2110,11 @@ save_type.container
          Array
 ;
          Ordered set of values of the same type. Operations across arrays are
-         equivalent to operations across elements of the Array.
+         equivalent to operations across elements of the array.
 ;
          Matrix
 ;
-         Ordered set of numerical values for a tensor. Tensor operations such
+         Ordered set of numerical values for a tensor. Tensor operations, such
          as dot and cross products, are valid cross matrix objects. A matrix
          with a single dimension is interpreted as a row or column vector as
          required.
@@ -2159,7 +2160,7 @@ save_type.contents
     Two case-insensitive strings are considered identical when
     they match under the Unicode canonical caseless matching algorithm.
 
-    In all cases, 'whitespace' refers to ASCII whitespace only, that
+    In all cases, 'white space' refers to ASCII white space only, that
     is [U+0009], [U+000A], [U+000D] and [U+0020].
 
     Note that descriptions of text syntax are relevant only to those
@@ -2182,12 +2183,12 @@ save_type.contents
          Word
 ;
          Case-sensitive sequence of CIF2 characters containing no ASCII
-         whitespace.
+         white space.
 ;
          Code
 ;
          Case-insensitive sequence of CIF2 characters containing no ASCII
-         whitespace.
+         white space.
 ;
          Name
 ;
@@ -2197,7 +2198,7 @@ save_type.contents
          Tag
 ;
          Case-insensitive CIF2 character sequence with leading underscore and
-         no ASCII whitespace.
+         no ASCII white space.
 ;
          Uri
 ;
@@ -2321,7 +2322,7 @@ save_type.dimension
     _definition.update            2021-07-28
     _description.text
 ;
-    The dimensions of a list, array or matrix of elements expressed as
+    The dimensions of a List, Array or Matrix of elements expressed as
     a text string. A Matrix with a single dimension is interpreted as
     a vector.
 ;
@@ -2352,12 +2353,12 @@ save_type.indices
     defined object when the defined object has 'Table' as its
     _type.container attribute. Values are a subset of the codes and
     constructions defined for attribute _type.contents, accounting
-    for the fact that syntactically, indices are always case-sensitive
+    for the fact that, syntactically, indices are always case sensitive
     quoted strings.
 
     Meaningful only when the defined item has _type.container 'Table'.
 
-    See the definition for _type.contents for the character set definition.
+    See the definition for _type.contents for the character-set definition.
 ;
     _name.category_id             type
     _name.object_id               indices
@@ -2376,7 +2377,7 @@ save_type.indices
          Code
 ;
          Case-insensitive sequence of CIF2 characters containing no ASCII
-         whitespace.
+         white space.
 ;
          Date
 ;
@@ -2446,7 +2447,7 @@ save_type.purpose
          Import
 ;
          >>> Applied ONLY in the DDLm Reference Dictionary <<<
-         Used to type the SPECIAL attribute '_import.get' that is present in
+         Used to type the special attribute '_import.get' that is present in
          dictionaries to instigate the importation of external dictionary
          definitions.
 ;
@@ -2461,7 +2462,7 @@ save_type.purpose
 ;
          >>> Applied ONLY in the DDLm Reference Dictionary <<<
          Used to type attributes employed to record the audit definition
-         information (creation date, update version and cross reference codes)
+         information (creation date, update version and cross-reference codes)
          of items, categories and files.
 ;
          Identify
@@ -2516,9 +2517,9 @@ save_type.purpose
          recorded by measurement or derivation. A data item definition for the
          standard uncertainty (SU) of this item must be provided in a separate
          definition with _type.purpose of 'SU'. The value of a measurand item
-         should be accompanied by a value of its associated SU item, either: 1)
+         should be accompanied by a value of its associated SU item, either: (a)
          integrated with the measurand value in a manner characteristic of the
-         data format; or 2) as a separate, explicit value for the associated SU
+         data format; or (b) as a separate, explicit value for the associated SU
          item. These alternatives are semantically equivalent.
 ;
          SU
@@ -2582,7 +2583,7 @@ save_type.source
 
          These assignments often represent a decision made that determines the
          course of the experiment (and therefore the data item may be deemed
-         primitive) or a particular choice in the way the data was analysed
+         primitive) or a particular choice in the way the data were analysed
          (and therefore the data item may be considered non-primitive).
 ;
          Related
@@ -2592,9 +2593,9 @@ save_type.source
          This state indicates that the item was used to record the SU value of
          a related measurand item or that the item was used in the construction
          of looped lists of data. In the latter case, it typically identifies
-         an item whose unique values are used as the reference key for a loop
+         an item whose unique values are used as the reference key for a Loop
          category and/or an item which has values in common with those of
-         another loop category and is considered a Link between these lists.
+         another Loop category and is considered a Link between these lists.
 
          Data items of this type are considered either primitive or
          non-primitive.
@@ -2635,7 +2636,7 @@ save_units.code
     A code which identifies the units of measurement.
 
     The 'unspecified' code should only be used in cases when the units cannot
-    be properly expressed in DDLm. A typical example of such situation is a
+    be properly expressed in DDLm. A typical example of such a situation is a
     List data item with constituent values that may have differing units.
 ;
     _name.category_id             units
