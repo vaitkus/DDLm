@@ -890,8 +890,11 @@ save_dictionary_author.email
 ;
     The electronic mail address of an author of the dictionary, in a form
     recognizable to international networks. The format of e-mail addresses is
-    given in Section 3.4, Address Specification, of Internet Message Format,
-    RFC 2822, P. Resnick (Editor), Network Standards Group, April 2001.
+    given in RFC 2822.
+
+    Ref: Resnick, P. (2001). Internet Message Format. RFC 2822.
+    Section 3.4, Address Specification.
+    https://www.rfc-editor.org/rfc/rfc2822
 ;
     _name.category_id             dictionary_author
     _name.object_id               email
@@ -1200,9 +1203,8 @@ save_enumeration.mandatory
     _definition.update            2012-05-07
     _description.text
 ;
-    Yes or No flag on whether the enumerate states specified for an
-    item in the current definition (in which item appears) MUST be
-    used on instantiation.
+    Yes or No flag on whether the enumerate states specified for the
+    defined item MUST be used on instantiation.
 ;
     _name.category_id             enumeration
     _name.object_id               mandatory
@@ -1292,8 +1294,8 @@ save_enumeration_default.index
     Deprecated. The _enumeration_defaults.index data item should be
     used instead of this item.
 
-    Index key in the list of default values referenced to by the value
-    of _enumeration.def_index_id.
+    Index key identifying a default value that is referenced by a matching
+    value of _enumeration.def_index_id.
 ;
     _name.category_id             enumeration_default
     _name.object_id               index
@@ -1651,6 +1653,10 @@ save_import_details.file_id
     A URI reference as per RFC 3986 giving the location of the source
     dictionary. When a relative URI is used, the base URI for the URI reference
     is the _dictionary.uri of the importing dictionary.
+
+    Ref: Berners-Lee, T., Fielding, R. and Masinter, L. (2005). STD 66:
+    Uniform Resource Identifier (URI): Generic Syntax. RFC 3986.
+    https://www.rfc-editor.org/rfc/rfc3986
 ;
     _name.category_id             import_details
     _name.object_id               file_id
@@ -1895,6 +1901,10 @@ save_import_details.single_index
 ;
          URI reference as per RFC 3986 giving the location of the source
          dictionary.
+
+         Ref: Berners-Lee, T., Fielding, R. and Masinter, L. (2005). STD 66:
+         Uniform Resource Identifier (URI): Generic Syntax. RFC 3986.
+         https://www.rfc-editor.org/rfc/rfc3986
 ;
          version
 ;
@@ -2204,10 +2214,18 @@ save_type.contents
 ;
          Uniform Resource Identifier reference as defined in RFC 3986 Section
          4.1.
+
+         Ref: Berners-Lee, T., Fielding, R. and Masinter, L. (2005). STD 66:
+         Uniform Resource Identifier (URI): Generic Syntax. RFC 3986.
+         https://www.rfc-editor.org/rfc/rfc3986
 ;
          Iri
 ;
          Internationalized Resource Identifier as defined in RFC 3987.
+
+         Ref: Duerst, M. and Suignard, M. (2005). Internationalized
+         Resource Identifiers (IRIs). RFC 3987.
+         https://www.rfc-editor.org/rfc/rfc3987
 ;
          Date
 ;
@@ -2217,7 +2235,10 @@ save_type.contents
          DateTime
 ;
          A timestamp. Text formats must use date-time or full-date productions
-         of RFC 3339 ABNF.
+         as supplied in the RFC 3339 Augmented Backus-Naur Form specification.
+
+         Ref: Klyne, G. and Newman, C. (2002). Date and Time on the Internet:
+         Timestamps. RFC 3339. https://www.rfc-editor.org/rfc/rfc3339
 ;
          Version
 ;
@@ -2386,6 +2407,10 @@ save_type.indices
          Uri
 ;
          A Uniform Resource Identifier string, per RFC 3986.
+
+         Ref: Berners-Lee, T., Fielding, R. and Masinter, L. (2005). STD 66:
+         Uniform Resource Identifier (URI): Generic Syntax. RFC 3986.
+         https://www.rfc-editor.org/rfc/rfc3986
 ;
          Version
 ;
@@ -2619,7 +2644,7 @@ save_UNITS
     _definition.update            2013-03-06
     _description.text
 ;
-    The attributes for specifying units of measure.
+    The attributes for specifying units of measurement.
 ;
     _name.category_id             ATTRIBUTES
     _name.object_id               UNITS
