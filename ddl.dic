@@ -2406,7 +2406,8 @@ save_type.indices
 ;
          Uri
 ;
-         A Uniform Resource Identifier string, per RFC 3986.
+         Uniform Resource Identifier reference as defined in RFC 3986 Section
+         4.1.
 
          Ref: Berners-Lee, T., Fielding, R. and Masinter, L. (2005). STD 66:
          Uniform Resource Identifier (URI): Generic Syntax. RFC 3986.
