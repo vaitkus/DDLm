@@ -11,7 +11,7 @@ data_DDL_DIC
     _dictionary.title             DDL_DIC
     _dictionary.class             Reference
     _dictionary.version           4.2.1-dev
-    _dictionary.date              2026-06-08
+    _dictionary.date              2026-06-25
     _dictionary.uri
         https://raw.githubusercontent.com/COMCIFS/DDLm/main/ddl.dic
     _dictionary.ddl_conformance   4.2.0
@@ -1663,7 +1663,7 @@ save_import_details.file_id
     _type.purpose                 Identify
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Uri
+    _type.contents                Uri-ref
 
 save_
 
@@ -2212,14 +2212,32 @@ save_type.contents
 ;
          Uri
 ;
-         Uniform Resource Identifier reference as defined in RFC 3986 Section
-         4.1.
+         An absolute Uniform Resource Identifier as defined in RFC 3986.
 
          Ref: Berners-Lee, T., Fielding, R. and Masinter, L. (2005). STD 66:
          Uniform Resource Identifier (URI): Generic Syntax. RFC 3986.
-         https://www.rfc-editor.org/rfc/rfc3986
+         Section 4.3. Absolute URI.
+         https://www.rfc-editor.org/rfc/rfc3986#section-4.3
+;
+         Uri-ref
+;
+         Uniform Resource Identifier reference as defined in RFC 3986 Section
+         4.1. A URI reference may be either an absolute or a relative URI.
+
+         Ref: Berners-Lee, T., Fielding, R. and Masinter, L. (2005). STD 66:
+         Uniform Resource Identifier (URI): Generic Syntax. RFC 3986.
+         Section 4.1. URI Reference.
+         https://www.rfc-editor.org/rfc/rfc3986#section-4.1
 ;
          Iri
+;
+         Internationalized Resource Identifier as defined in RFC 3987.
+
+         Ref: Duerst, M. and Suignard, M. (2005). Internationalized
+         Resource Identifiers (IRIs). RFC 3987.
+         https://www.rfc-editor.org/rfc/rfc3987
+;
+         Iri-ref
 ;
          Internationalized Resource Identifier as defined in RFC 3987.
 
@@ -3228,7 +3246,7 @@ save_
        by explicitly specifying that it adheres to the formal grammar
        provided in SemVer version 2.0.0.
 ;
-         4.2.0                    2026-02-25
+         4.2.0                    2026-06-25
 ;
        Added the "unspecified" enumeration value for the _units.code attribute.
 
@@ -3272,6 +3290,11 @@ save_
 
        Added '_dictionary_author.name', '_dictionary_author.id_orcid' and
        '_dictionary_author.email' to the recommended attribute list.
+
+       Added 'Uri-ref' and 'Iri-ref' as machine-parsable content types, and
+       specified that the 'Uri' content type must be an *absolute* URI. In
+       consequence, changed the _type.contents of _import_details.file_id
+       to Uri-ref.
 ;
          4.2.1-dev                2026-06-08
 ;
