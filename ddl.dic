@@ -2239,7 +2239,8 @@ save_type.contents
 ;
          Iri-ref
 ;
-         Internationalized Resource Identifier as defined in RFC 3987.
+         Internationalized Resource Identifier reference as defined
+         in RFC 3987.
 
          Ref: Duerst, M. and Suignard, M. (2005). Internationalized
          Resource Identifiers (IRIs). RFC 3987.
