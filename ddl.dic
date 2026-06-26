@@ -29,7 +29,7 @@ save_ATTRIBUTES
     _definition.id                ATTRIBUTES
     _definition.scope             Category
     _definition.class             Head
-    _definition.update            5
+    _definition.update            2013-09-08
     _description.text
 ;
     This category is parent of all other categories in the DDLm
@@ -60,7 +60,7 @@ save_alias.definition_id
 
     _definition.id                '_alias.definition_id'
     _definition.class             Attribute
-    _definition.update            2019-04-02
+    _definition.update            No
     _description.text
 ;
     Identifier tag of an aliased definition.
