@@ -29,7 +29,7 @@ save_ATTRIBUTES
     _definition.id                ATTRIBUTES
     _definition.scope             Category
     _definition.class             Head
-    _definition.update            2011-07-27
+    _definition.update            5
     _description.text
 ;
     This category is parent of all other categories in the DDLm
