@@ -1647,7 +1647,7 @@ save_import_details.file_id
 
     _definition.id                '_import_details.file_id'
     _definition.class             Attribute
-    _definition.update            2021-02-03
+    _definition.update            2026-06-25
     _description.text
 ;
     A URI reference as per RFC 3986 giving the location of the source
@@ -2148,7 +2148,7 @@ save_type.contents
 
     _definition.id                '_type.contents'
     _definition.class             Attribute
-    _definition.update            2026-02-25
+    _definition.update            2026-06-25
     _description.text
 ;
     Syntax of the value elements within the container type. Where the
