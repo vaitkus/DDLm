@@ -2423,7 +2423,7 @@ save_type.indices
 ;
          ISO date format <yyyy>-<mm>-<dd>.
 ;
-         Uri
+         Uri-ref
 ;
          Uniform Resource Identifier reference as defined in RFC 3986 Section
          4.1.
