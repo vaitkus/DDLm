@@ -11,7 +11,7 @@ data_DDL_DIC
     _dictionary.title             DDL_DIC
     _dictionary.class             Reference
     _dictionary.version           4.2.1-dev
-    _dictionary.date              2026-06-25
+    _dictionary.date              2026-07-09
     _dictionary.uri
         https://raw.githubusercontent.com/COMCIFS/DDLm/main/ddl.dic
     _dictionary.ddl_conformance   4.2.0
@@ -2359,7 +2359,7 @@ save_type.dimension
 
     _definition.id                '_type.dimension'
     _definition.class             Attribute
-    _definition.update            2021-07-28
+    _definition.update            2026-07-09
     _description.text
 ;
     The dimensions of a List, Array or Matrix of elements expressed as
@@ -2376,7 +2376,7 @@ save_type.dimension
     loop_
       _description_example.case
       _description_example.detail
-         '[3,3]'                  '3x3 matrix of elements.'
+         '[3,5]'                  'A 3x5 matrix with 3 rows and 5 columns.'
          '[6]'                    'List of 6 elements.'
          '[]'                     'Unknown number of list elements.'
 
@@ -3297,7 +3297,7 @@ save_
        consequence, changed the _type.contents of _import_details.file_id
        to Uri-ref.
 ;
-         4.2.1-dev                2026-06-25
+         4.2.1-dev                2026-07-09
 ;
        # Please add changes below and change the update date above until ready
        # for next release
