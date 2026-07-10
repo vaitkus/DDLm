@@ -11,7 +11,7 @@ data_DDL_DIC
     _dictionary.title             DDL_DIC
     _dictionary.class             Reference
     _dictionary.version           4.2.1-dev
-    _dictionary.date              2026-06-25
+    _dictionary.date              2026-07-09
     _dictionary.uri
         https://raw.githubusercontent.com/COMCIFS/DDLm/main/ddl.dic
     _dictionary.ddl_conformance   4.2.0
@@ -2094,7 +2094,7 @@ save_type.container
 
     _definition.id                '_type.container'
     _definition.class             Attribute
-    _definition.update            2021-12-08
+    _definition.update            2026-07-09
     _description.text
 ;
     The structure of values for the defined data item.
@@ -2127,7 +2127,7 @@ save_type.container
          Ordered set of numerical values for a tensor. Tensor operations, such
          as dot and cross products, are valid cross matrix objects. A matrix
          with a single dimension is interpreted as a row or column vector as
-         required.
+         required (see the _type.dimension attribute).
 ;
          Table
 ;
@@ -2148,7 +2148,7 @@ save_type.contents
 
     _definition.id                '_type.contents'
     _definition.class             Attribute
-    _definition.update            2026-06-25
+    _definition.update            2026-07-09
     _description.text
 ;
     Syntax of the value elements within the container type. Where the
@@ -2271,7 +2271,7 @@ save_type.contents
 ;
          Dimension
 ;
-         Size of an Array/Matrix/List expressed as a text string. The text
+         Size of a List, Array or Matrix expressed as a text string. The text
          string itself consists of zero or more non-negative integers separated
          by commas placed within bounding square brackets. Empty square
          brackets represent a list of unknown size.
@@ -2359,12 +2359,13 @@ save_type.dimension
 
     _definition.id                '_type.dimension'
     _definition.class             Attribute
-    _definition.update            2021-07-28
+    _definition.update            2026-07-09
     _description.text
 ;
     The dimensions of a List, Array or Matrix of elements expressed as
-    a text string. A Matrix with a single dimension is interpreted as
-    a vector.
+    a text string. A Matrix with a single dimension is represented as
+    a List that may be interpreted as either a row vector or a column
+    vector, depending on the context.
 ;
     _name.category_id             type
     _name.object_id               dimension
@@ -2376,9 +2377,28 @@ save_type.dimension
     loop_
       _description_example.case
       _description_example.detail
-         '[3,3]'                  '3x3 matrix of elements.'
-         '[6]'                    'List of 6 elements.'
-         '[]'                     'Unknown number of list elements.'
+         '[3,5]'
+;
+         A 3x5 matrix with 3 rows and 5 columns.
+;
+         '[1,3]'
+;
+         A 1x3 matrix (row vector).
+;
+         '[3,1]'
+;
+         A 3x1 matrix (column vector).
+;
+         '[6]'
+;
+         A list of 6 elements. When paired with the Matrix container,
+         it can be interpreted as either a row or a column vector, depending
+         on the context.
+;
+         '[]'
+;
+         A list or matrix with an unknown number of elements.
+;
 
 save_
 
@@ -3297,8 +3317,11 @@ save_
        consequence, changed the _type.contents of _import_details.file_id
        to Uri-ref.
 ;
-         4.2.1-dev                2026-06-25
+         4.2.1-dev                2026-07-09
 ;
        # Please add changes below and change the update date above until ready
        # for next release
+
+       Clarified the representation and interpretation of matrices with
+       a single dimension.
 ;
